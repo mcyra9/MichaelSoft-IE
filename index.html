@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is an iframe based webpage viewer with extra features for a better user experience and a browser like layout.">
+    <title>internet</title>
+
+    <!-- style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">       
+</head>
+<body>
+    <h1 style="margin-bottom: 8px;">MichaelSoft Internet Explorer</h1>
+    <div id="bar">
+        <div class="option" id="linkBtn">recomended links</div>
+        <div class="option" id="projectBtn">about project</div>
+        <div class="option" id="authorBtn">about author</div>
+    </div>
+    <div id="controls">
+        <button id="fullBtn" class="square">⤢</button>
+        <div class="line"></div>
+        <button id="incBtn" class="square">+</button>
+        <button id="decBtn" class="square">-</button>
+        <div class="line"></div>
+        <button id="backBtn" class="square">←</button>
+        <button id="forwardBtn" class="square">→</button>
+        <input type="text" placeholder="Enter URL, start with https://" value="https://www." id="urlInput">        
+        <button id="GoBtn">Go</button>
+        <button id="openBtn" class="square">⇗</button>
+    </div>
+
+    <iframe src="about:blank" allow="fullscreen; autoplay;" width="800" height="500" id="iframe"></iframe>
+
+    <div id="linkBox" class="box" style="display: none">
+        <div style="display: flex;">
+            <h2>Recomended Links</h2>
+            <div class="backBtn">X</div>
+        </div>
+        <!--link list-->
+        <div class="link" data-url="https://www.youtube.com/embed/tVlKLpxyCBY?si=WP0gqE4QGQdHZAfF&autoplay=1">
+            <h3>Youtube #1</h3>
+            <p>click this link</p>
+            <b>https://www.youtube.com/embed/tVlKLpxyCBY</b>
+        </div>
+        <div class="link" data-url="https://www.youtube.com/embed/dQw4w9WgXcQ?si=WA_g6qmRg3WSbZw1&autoplay=1"> //&mute=1
+            <h3>Youtube #2</h3>
+            <p>click this link</p>
+            <b>https://www.youtube.com/embed/dQw4w9WgXcQ</b>
+        </div>
+        <div class="link" data-url="https://desmos.com">
+            <h3>Desmos</h3>
+            <p>Desmos, the graphing calculator and math tool hub.</p>
+            <b>https://www.desmos.com</b>
+        </div>
+        <div class="link" data-url="https://theoldnet.com">
+            <h3>The Old Net</h3>
+            <p>check out this web app to show the history of the world wide web.</p>
+            <b>https://www.theoldnet.com</b>
+        </div>
+        <div class="link" data-url="https://www.wikipedia.org">
+            <h3>Wikipedia</h3>
+            <p>Wikipdia, the free encyclopedia.</p>
+            <b>https://www.wikipedia.org</b>
+        </div>
+    </div>
+
+    <div id="projectBox" class="box" style="display: none">
+        <div style="display: flex;">
+            <h2>About this project</h2>
+            <div class="backBtn">X</div>
+        </div>
+        <h3>MichaelSoft Internet Explorer version 1.0</h3>
+        <p>This is an iframe based webpage viewer with extra features for a better user experience and a browser like layout.</p>
+        <h4>Github repository</h4>
+        <a>example.com</a>
+    </div>
+
+    <div id="authorBox" class="box" style="display: none">
+        <div style="display: flex;">
+            <h2>About the author of this project</h2>
+            <div class="backBtn"> X </div>
+        </div>
+        <p>This project was programmed by Michael Cyranowicz with the help of github copilot and code from previous projects.</p>
+        <h3>contact</h3>
+        <b> Discord </b>
+        <p style="margin: 4px 0">ilikeguineapigs_</p>
+        <b>Email</b>
+        <p style="margin: 4px 0">Mcyra10@gmail.com</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

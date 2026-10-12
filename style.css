@@ -1,0 +1,265 @@
+:root {
+    --metro-bg: #111111;
+    --metro-fg: #ffffff;
+    --metro-accent: #0078d7;
+    --metro-accent-hover: #1f8ad2;
+    --metro-accent-fg: #ffffff;
+    --metro-muted: #a0a0a0;
+    --metro-border: #555555;
+    --metro-border-focus: #ffffff;
+    --metro-surface: #222222;
+    
+    /* Font Stack */
+    --metro-font: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    /*background-color: var(--metro-bg);*/
+    background-image: url('/green-raining-characters.gif');
+    background-repeat: repeat;
+    background-size: 200px 250px; 
+
+    color: var(--metro-fg);
+    font-family: var(--metro-font);
+    font-size: 11pt;
+    line-height: 1.5;
+    padding:  0 40px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   TYPOGRAPHY (Segoe UI Typography Guidelines)
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300; /* Light weight is core to Metro headings */
+    color: var(--metro-fg);
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+
+h1 { font-size: 38pt; letter-spacing: -0.02em; }
+h2 { font-size: 26pt; letter-spacing: -0.01em; }
+h3 { font-size: 18pt; font-weight: 400; }
+h4 { font-size: 14pt; font-weight: 600; }
+h5 { font-size: 11pt; font-weight: 600; text-transform: uppercase; }
+h6 { font-size: 9pt; font-weight: 600; text-transform: uppercase; color: var(--metro-muted); }
+
+p {
+    font-size: 11pt;
+    font-weight: 400;
+    margin-bottom: 1.5em;
+    max-width: 70ch; /* Optimal reading width */
+}
+
+small {
+    font-size: 9pt;
+    color: var(--metro-muted);
+}
+
+a {
+    color: var(--metro-accent);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--metro-accent-hover);
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   FORM INPUTS & CONTROLS
+   ========================================================================== */
+label {
+    display: block;
+    font-size: 10pt;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+/* Text Inputs (Text, Password, Email, Number, Tel, URL) */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
+    width: 100%;
+    max-width: 300px;
+    height: 28px;
+    padding: 4px 8px;
+    margin: 0 2px;
+    border: 2px solid var(--metro-border);
+    background-color: var(--metro-bg);
+    color: var(--metro-fg);
+    font-family: var(--metro-font);
+    font-size: 11pt;
+    outline: none;
+    transition: border-color 0.15s ease-in-out;
+}
+
+/* Buttons */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    /*min-width: 120px;*/
+    height: 32px;
+    padding: 4px 20px;
+    margin: 0 2px;
+    background-color: var(--metro-surface);
+    border: 2px solid transparent;
+    color: var(--metro-fg);
+    font-family: var(--metro-font);
+    font-size: 11pt;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    user-select: none;
+    transition: background-color 0.1s, border-color 0.1s;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    background-color: var(--metro-border);
+}
+
+button:active,
+input[type="button"]:active,
+input[type="submit"]:active {
+    background-color: var(--metro-fg);
+    color: var(--metro-bg);
+}
+
+/* Primary/Accent button style using semantic class or default submit */
+button.primary,
+input[type="submit"] {
+    background-color: var(--metro-accent);
+    color: var(--metro-accent-fg);
+}
+
+button.primary:hover,
+input[type="submit"]:hover {
+    background-color: var(--metro-accent-hover);
+}
+
+button.primary:active,
+input[type="submit"]:active {
+    background-color: var(--metro-fg);
+    color: var(--metro-bg);
+}
+
+/* custom classes */
+#controls {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 8px 4px;
+}
+
+.line {
+    display: inline-flex;
+    height: 34px;
+    width: 2px;
+    margin: 0 2px;
+    background-color: var(--metro-border);
+}
+
+.square {
+    min-width: 32px;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    place-items: center;
+}
+
+.option {
+    height: 30px;
+    padding: 0 6px;
+    margin: 0 2px;
+
+    background-color: #252525;
+    border-bottom: 2px solid var(--metro-accent);
+
+    cursor: pointer;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option:hover {
+    background-color: var(--metro-border);
+    border-bottom: 2px solid var(--metro-accent-hover);
+}
+
+.option:active {
+    background: white;
+    color: black;
+}
+
+#bar {
+    margin: 4px 4px;
+}
+
+#goBtn {
+    width: 20px;
+}
+
+#iframe {
+    border: 2px solid var(--metro-muted);
+    background-color: var(--metro-bg);
+}
+
+.box {
+    width: 40%;
+    height: 65%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+
+    padding: 1% 2% 2% 2%;
+    overflow: auto;
+    scrollbar-width: thin;
+    
+    background-color: var(--metro-surface);
+    border: 2px solid var(--metro-border);
+}
+
+.backBtn {
+    display: inline-flex;
+    margin-left: auto;
+    margin-top: 1%;
+    cursor: pointer;
+    font-size: 32px;
+    width: 10%;
+    height: 10%;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.backBtn:hover {
+    font-weight: 600;
+}
+
+.link {
+    margin: 6px 0;
+    padding: 5px;
+    background-color: var(--metro-border);
+    cursor: pointer;
+}
+
+.link h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.link p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
